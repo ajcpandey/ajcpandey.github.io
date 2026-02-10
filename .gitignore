@@ -1,0 +1,15 @@
+# Scratch/Temp files
+resume_raw.txt
+extract_pdf.ps1
+beautify.css.bak
+*.log
+
+# Design data
+brain/
+implementation_plan.md
+task.md
+walkthrough.md
+
+# OS files
+.DS_Store
+Thumbs.db

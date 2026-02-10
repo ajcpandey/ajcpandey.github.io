@@ -1,0 +1,74 @@
+/* Forced Profile Box Styles */
+.code-window {
+    background: rgba(30, 41, 59, 0.7) !important;
+    /* Slightly lighter for visibility */
+    border: 1px solid rgba(88, 166, 255, 0.3) !important;
+    /* Blueish border for visibility */
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(88, 166, 255, 0.2) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) !important;
+    /* More pronounced tilt */
+}
+
+.code-window:hover {
+    transform: perspective(1000px) rotateY(0) rotateX(0) translateY(-5px) !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(88, 166, 255, 0.5) !important;
+    border-color: rgba(88, 166, 255, 0.8) !important;
+}
+
+.code-header {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 16px 24px !important;
+}
+
+.code-title {
+    color: #e6edf3 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+.code-keyword {
+    color: #ff7b72 !important;
+    text-shadow: 0 0 12px rgba(255, 123, 114, 0.6);
+}
+
+.code-variable {
+    color: #d2a8ff !important;
+    text-shadow: 0 0 12px rgba(210, 168, 255, 0.6);
+}
+
+.code-property {
+    color: #79c0ff !important;
+}
+
+.code-string {
+    color: #a5d6ff !important;
+}
+
+/* Animation to draw attention */
+@keyframes float {
+    0% {
+        transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) translateY(0);
+    }
+
+    50% {
+        transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) translateY(-10px);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) translateY(0);
+    }
+}
+
+.code-window {
+    animation: float 6s ease-in-out infinite !important;
+}
+
+.code-window:hover {
+    animation: none !important;
+}
