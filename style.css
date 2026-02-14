@@ -496,7 +496,7 @@ img {
    Sections
    =========================== */
 .section {
-    padding: 120px 0;
+    padding: 80px 0;
     position: relative;
     z-index: 1;
 }
@@ -507,7 +507,7 @@ img {
 
 .section-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
 }
 
 .section-tag {
