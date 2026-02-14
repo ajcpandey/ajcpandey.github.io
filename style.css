@@ -236,8 +236,8 @@ img {
     background: rgba(126, 231, 135, 0.1);
     border: 1px solid rgba(126, 231, 135, 0.2);
     border-radius: 999px;
-    font-size: 0.813rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--accent-green);
     margin-bottom: 24px;
     animation: fadeInUp 0.8s ease forwards;
