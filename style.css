@@ -538,25 +538,33 @@ img {
    =========================== */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    justify-items: center;
-    text-align: center;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+    text-align: left;
 }
 
 .about-text {
-    max-width: 800px;
+    max-width: none;
 }
 
-.about-text p {
-    color: var(--text-secondary);
-    font-size: 1.063rem;
-    margin-bottom: 20px;
-    line-height: 1.8;
+.about-photo-frame {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
-.about-text strong {
-    color: var(--text-primary);
+.about-photo {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.02);
 }
 
 .about-highlights {
@@ -575,10 +583,6 @@ img {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     transition: var(--transition);
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: left;
 }
 
 .highlight:hover {
