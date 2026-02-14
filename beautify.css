@@ -21,96 +21,50 @@
     gap: 40px;
 }
 
-/* Glass Card */
-.glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 0;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 450px;
-    transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: floatCard 6s ease-in-out infinite;
-}
-
-.glass-card:hover {
-    transform: perspective(1000px) rotateY(0) rotateX(0) scale(1.02);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-}
-
-.glass-header {
-    background: rgba(240, 248, 255, 0.5);
-    padding: 12px 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+/* Hero Profile Image */
+.hero-visual {
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
 }
 
-.glass-dots {
-    display: flex;
-    gap: 6px;
+.profile-main-wrapper {
+    width: 380px;
+    height: 380px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 8px solid rgba(255, 255, 255, 0.5);
+    background: white;
+    animation: morph 8s ease-in-out infinite;
+    transition: var(--transition);
 }
 
-.glass-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.profile-main-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
-.glass-dot.red {
-    background: #ff5f57;
+.hero-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.glass-dot.yellow {
-    background: #febc2e;
-}
-
-.glass-dot.green {
-    background: #28c840;
-}
-
-.glass-title {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    opacity: 0.7;
-}
-
-.glass-content {
-    padding: 24px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
-    color: var(--text-primary);
-}
-
-.glass-content pre {
-    margin: 0;
-    white-space: pre-wrap;
-}
-
-.c-key {
-    color: var(--accent-purple);
-}
-
-.c-val {
-    color: var(--accent-blue);
-}
-
-@keyframes floatCard {
-
-    0%,
-    100% {
-        transform: perspective(1000px) rotateY(-10deg) rotateX(5deg) translateY(0);
+@keyframes morph {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
 
     50% {
-        transform: perspective(1000px) rotateY(-10deg) rotateX(5deg) translateY(-15px);
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
 }
 
