@@ -325,6 +325,7 @@ img {
 
 .hero-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 48px;
     animation: fadeInUp 0.8s 0.4s ease both;
@@ -342,6 +343,7 @@ img {
     transition: var(--transition);
     cursor: pointer;
     border: none;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -365,6 +367,19 @@ img {
     border-color: var(--accent-blue);
     background: rgba(88, 166, 255, 0.05);
     transform: translateY(-2px);
+}
+
+.btn-youtube {
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.btn-youtube:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 0, 0, 0.3);
 }
 
 /* Hero Stats */
