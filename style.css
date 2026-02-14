@@ -221,9 +221,6 @@ img {
     padding: 120px 24px 80px;
     position: relative;
     z-index: 1;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .hero-content {
