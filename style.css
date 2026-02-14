@@ -538,9 +538,14 @@ img {
    =========================== */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
 }
 
 .about-text p {
